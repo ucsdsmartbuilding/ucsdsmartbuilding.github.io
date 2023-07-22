@@ -13,6 +13,28 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <!-- Main CSS -->
 <link href="./assets/css/main.css" rel="stylesheet"/>
+
+<style>
+	#spinning{
+		width: 2rem;
+		height: 2rem;
+		background-color: rgb(60, 204, 96);
+		animation-name: spin;
+		animation-duration: 5000ms;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear; 
+		align-self: center;
+	}
+
+	@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+</style>
 </head>
 <body>    
 <!--------------------------------------
@@ -88,8 +110,9 @@ HEADER
 	<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 "></div>
 		<div class="row justify-content-center">
 			<div id="header" class="col-md-12 col-lg-12 pb-6 text-center"style="height:25rem;margin-top:-7rem;background-image: url(./assets/img/demo/ucsd1.png);background-repeat:no-repeat;background-size:cover">
-
-				<p class="display-4 secondfont pt-6 mt-6 font-weight-bold">Register</p>
+				
+				<p class="display-4 secondfont pt-6 mt-6 font-weight-bold">
+					<img src="./assets/img/demo/animation.png" style="width: 8rem;">Register</p>
 
 			</div>
 		</div>
@@ -118,9 +141,24 @@ MAIN
 		</div>
 		
 	</div>
-	<div class="col-md-12 col-lg-12 col-sm-12 text-center align-items-center">
-		<iframe style="height: 100rem;" src="https://docs.google.com/forms/d/e/1FAIpQLSfrA0AIaOvS-rbRoBSg__Za1OCPmJgpx0N15ENoMstZ5ggAxw/viewform?embedded=true" width="640" height="1324" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>
+
+	
+	<div class="col-md-12 col-lg-12 col-sm-12 text-center align-items-center justify-content-center">
+		<div class="row">
+		<div class="col-2 pl-6 ml-6"></div>
+		<div class="col-2 pl-6 ml-6"><div id="spinning" ></div></div>
+		</div>
+		<iframe style="height: 100rem;" id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLSfrA0AIaOvS-rbRoBSg__Za1OCPmJgpx0N15ENoMstZ5ggAxw/viewform?embedded=true" width="640" height="1324" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>
 	</div>
+
+	<script>
+		const element = document.getElementById("googleForm"); // 获取待监听的元素
+		const spin = document.getElementById("spinning")
+		element.addEventListener("load", function() {
+			spin.style.display="none"
+		});
+	</script>
+	
 
 
 </div>
