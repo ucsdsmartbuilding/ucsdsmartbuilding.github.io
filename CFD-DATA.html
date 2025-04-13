@@ -67,7 +67,7 @@ NAVBAR
 						<a class="nav-link text-white" id="HOME" href="./index.html">Home <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
+                    <li class="nav-item">
 						<a class="nav-link text-white" id="CFD-DATA" href="./CFD-DATA.html">BEAR-CFD-Data</a>
 					</li>
 					<li class="nav-item">
@@ -111,7 +111,7 @@ HEADER
 
 				<p class="display-4 secondfont pt-6 mt-6 font-weight-bold">
 					<img src="./assets/img/demo/animation.png" style="width: 8rem;">
-					BEAR-Data
+					BEAR-CFD-Data
 				</p>
 
 			</div>
@@ -121,9 +121,7 @@ HEADER
 
 	<!-- End Header -->
 
-	<!--------------------------------------
-MAIN
---------------------------------------->
+	<!--------------------------------------MAIN--------------------------------------->
 	<div class="container pb-4">
 		<div class="row justify-content-center">
 			<div class="col-lg-4 mb-4 col-md-8">
@@ -141,42 +139,38 @@ MAIN
 					<div class="row ">
 						<div class="col-4 ">
 							<p class="h3 pb-4 mb-2 font-weight-bold">
-								1 Building
+								Classroom in UCSD
 							</p>
 						</div>
 						<div class="col-4">
 							<p class="h3 pb-4 mb-2 font-weight-bold">
-								80+ Zones
+								10 Steady simulations & 300 Transient simulations
 							</p>
 						</div>
 						<div class="col-4">
 							<p class="h3 pb-4 mb-2 font-weight-bold">
-								17+ action commands
+								Varying control parameters
 							</p>
 						</div>
 					</div>
 					<p>
-						Our commitment is to <span class="font-weight-bold">consistently update and expand the
-							dataset</span> on our website to include not just the current building, but also others
-						within our campus. We anticipate this real-world data to be a substantial resource for
-						researchers. It not only offers a platform for testing predictive models and control policies
-						but also significantly enhances research across various fields associated with energy-efficient
-						building systems. 
+						The data was generated using ANSYS FLUENT 2023R2 and includes both steady-state and transient flow simulations. It is designed to support research in scientific machine learning, particularly in learning neural operators and data-driven PDE solvers.
 
+                        This dataset is released for research purposes only. Please cite the authors if used in published work.
 						Please download data from 
-						<a href="https://huggingface.co/datasets/alwaysbyx/Bear-Data" target="_blank">
+						<a href="https://huggingface.co/datasets/alwaysbyx/Bear-CFD-dataset" target="_blank">
 							this Hugging Face link
 						</a>.
 					</p>
-					<p class="font-weight-bold text-center pt-4">Sites</p>
+					<!-- <p class="font-weight-bold text-center pt-4">Sites</p>
 
 					<p><span class="font-weight-bold">Building Name: </span>Multipurpose Building</p>
 					<p><span class="font-weight-bold">Site ID: </span>NAE-01</p>
 					<p><span class="font-weight-bold">Description: </span>This building is located at UCSD and consists
-						of 86 rooms</p>
-					<div class="align-items-center">
+						of 86 rooms</p> -->
+					<!-- <div class="align-items-center">
 						<img src="./assets/img/demo/data3.png">
-					</div>
+					</div> -->
 					<!-- <div class="row">
 						<div class="col-6 ">
 							<p class="font-weight-bold text-center">Raw Data</p>
@@ -294,7 +288,7 @@ MAIN
 
 
 
-					<p class="font-weight-bold text-center pt-4">Data Fields </p>
+					<!-- <p class="font-weight-bold text-center pt-4">Data Fields </p>
 
 
 					<table id="example" class="display" style="width:100%">
@@ -434,7 +428,7 @@ MAIN
 						If you use this Dataset in published work, we ask that you site this dataset so others can find
 						and use the dataset as well.
 					</p>
-			</div>
+			</div> -->
 
 
 
@@ -467,10 +461,10 @@ MAIN
 		</div>
 	</div>
 
-	</div>
+	<!-- </div> -->
 
 
-	<div id="test-editormd-view2" style="padding-left: 20%;padding-right: 20%;">
+	<!-- <div id="test-editormd-view2" style="padding-left: 20%;padding-right: 20%;">
 		<textarea id="append-test" style="display:none;">
 
 
@@ -484,8 +478,8 @@ MAIN
   }
 ```
 </textarea>
-</div>
-	</div>
+</div> -->
+	<!-- </div> -->
 
 	<script src="js/jquery.min.js"></script>
 	<script src="lib/marked.min.js"></script>
